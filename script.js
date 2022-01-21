@@ -10,3 +10,19 @@ const firstUnder = (numbers, limit) => {
     const resStr = strings.find((item, index) => item[0] === letter)
         console.log(resStr)
   }
+
+  const oddIntegers = (numbers) => {
+    const odds = numbers.filter((number) => number % 2 ===1)
+        console.log(odds)
+  }
+  
+  const longStrings = (strings, minimumLength) => {
+    const longs = strings.filter((item, index) => strings[index].length >= minimumLength)
+         console.log(longs)
+  }
+  
+  const getNotEmptyPhoneNumbers = (phoneNumbers) => {
+    const notEmpty = phoneNumbers.filter((item) => phoneNumbers !== undefined)
+    console.log(notEmpty)
+   }
+  
