@@ -60,3 +60,54 @@ const exclamations = (strings) => {
         console.log(letters)
   }
 
+
+  //-----------------------------------------------------------
+
+
+
+  const containingQuotes = (sentences) => {
+    const sentencesWithQuotes = sentences.filter((item) => containsQuote(item))
+    console.log(sentencesWithQuotes)
+  }
+  
+  const balance = (expenses, startingBalance) => {
+    let remainingBalance = expenses.reduce((prew, item) => prew - item, startingBalance)
+    console.log(remainingBalance)
+  }
+  
+  const evenLengthWord = (words) => {
+    let word = words.find((item) => item.length % 2 === 0 && item.length !== 0)
+    console.log(word)
+  }
+  
+  const snippets = (sentences, desiredWordCount = 3) => {
+    const snippedSentences = sentences.map((item) => snippet(item, desiredWordCount)) 
+    console.log(snippedSentences)
+  }
+  
+  const initials = (names) => {
+    const namesAsInitials = names.map((item) => convertToInitials(item))
+    console.log(namesAsInitials)
+  }
+
+  const pairAbbreviations = (pairData) => {
+    const pairs = {};
+    pairData.forEach((item) =>  { pairs [item[1]] = item[0]})
+    console.log(pairs)
+  }
+  
+  /* вспомогательные функции, их трогать не нужно */
+  const convertToInitials = (name) => {
+    return name.match(/\b[a-z]/ig).join('').toUpperCase();
+  }
+  
+  const containsQuote = (sentence) => {
+    return /(".+")/.test(sentence);
+  }
+  
+  const snippet = (sentence, desiredWordCount = 3) => {
+    const pattern = new RegExp(`((\\w+ ){${desiredWordCount}})(.*)`);
+  
+    return sentence.replace(pattern, '$1...')
+  }
+
