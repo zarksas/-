@@ -26,3 +26,16 @@ const firstUnder = (numbers, limit) => {
     console.log(notEmpty)
    }
   
+   
+
+const sum = (numbers) => {
+    const sumNum = numbers.reduce((prew, item) => prew + item)
+        console.log(sumNum)
+  }
+  
+  /* ставит тире между словами */
+  const hyphenate = (words) => {
+    const res = words.reduce((prew, item) => `${prew}-${item}`)
+    console.log(res)
+  }
+
