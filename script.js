@@ -36,6 +36,27 @@ const sum = (numbers) => {
   /* ставит тире между словами */
   const hyphenate = (words) => {
     const res = words.reduce((prew, item) => `${prew}-${item}`)
-    console.log(res)
+        console.log(res)
+  }
+
+
+
+
+  /* добавляет восклицательный знак в конец каждого элемента массива */
+const exclamations = (strings) => {
+    const loudStrings = strings.map((item, index) => item + '!')
+        console.log(loudStrings)
+  }
+  
+  /* преобразует все числа из массива в квадрат */
+  const squareAll = (numbers) => {
+    const squares = numbers.map((item) => item **2)
+        console.log(squares)
+  }
+  
+  /* заменяет все слова в массиве на их первые буквы */
+  const firstLetters = (words) => {
+    const letters = words.map((item, index) => item[0])
+        console.log(letters)
   }
 
